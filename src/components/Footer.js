@@ -20,7 +20,7 @@ const Footer = () => {
                 <Row>
                     <Col sm={2}></Col>
                     <Col sm={8}  className="greenProyect-lg">
-                        <img src="/assets/img/otras/fl.png" className="imgLogoEco"></img>
+                        <img src="./assets/img/otras/fl.png" className="imgLogoEco"></img>
                         <div className="texto">
                             <h2>Fluit Green Proyect</h2>
                             <p className='pp'>Cada año, 8 millones de toneladas de plástico desaparecen en el océano.<span className="strong"> Tenemos que hacer algo al respecto.</span></p>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <Row>
                     <Col sm={2}></Col>
                     <Col sm={8}  className="rojosangre greenProyect-lg">
-                        <img src="/assets/img/otras/pincha.png" className="imgLogoEco"></img>
+                        <img src="./assets/img/otras/pincha.png" className="imgLogoEco"></img>
                         <div className="texto">
                             <h2 className='titu'>Pinchas hasta la medula</h2>
                             <p className='pp'>Sabias que con tu donacion de medula, en menos de 3 horas, podes salvarle la vida a alguien?.
@@ -56,7 +56,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col sm={12} className="center">
-                        <img src="/assets/img/otras/logo.jpg" className="imgLogoEco"></img>
+                        <img src="./assets/img/otras/logo.jpg" className="imgLogoEco"></img>
                         <h4>Condiciones y Accesos</h4>
                     </Col>
                 </Row> 
