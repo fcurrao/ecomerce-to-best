@@ -6,7 +6,8 @@ import { collection, getDocs, query, where } from "firebase/firestore"
 import db from "../firebaseConfig"
 import { useParams } from 'react-router-dom'
 import Catalogo from '../components/Catalogo'
-
+import ElCarousel from '../components/ElCarousel'
+import Container from "react-bootstrap/Container";
 
 const Home = () => {
 
@@ -15,7 +16,7 @@ const Home = () => {
 
     const { categoryid } = useParams()
     const [listProducts, setListProducts] = useState([])
-    
+
 
 
     useEffect(() => {
@@ -44,21 +45,25 @@ const Home = () => {
 
     return (
         <>
+            {/* <ElCarousel  /> */}
+            <Container>
+            {/* <ItemListContainer titulo="Listado de Productos" filtro=""/> */}
             <section className='paginaPrincipal'>
                 <div className='divTitulo'>
                     <h1 className="textoCentrado titulo">Bonsais Orlando</h1>
                     <h2 className="textoCentrado subtitulo">Bonsais, paisajismo, Maquetas de Jardines,Paisaje en maceta y Peinjing</h2>
                 </div>
 
-                <div className='listaDeProductos'></div>
-                
-                    <Catalogo data={listProducts}/>
+                <div className='listaDeProductos' >
                     
-                    
-                     
+                    <div className='tituloDeDiv'> </div>
+                    <Catalogo data={listProducts} />
+ 
+                </div>
 
 
             </section>
+                </Container>
         </>
     )
 }
