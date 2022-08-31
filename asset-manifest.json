@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/ecomerce-to-best/static/css/main.eb509932.css",
-    "main.js": "/ecomerce-to-best/static/js/main.a3589454.js",
+    "main.js": "/ecomerce-to-best/static/js/main.2992efb7.js",
     "static/js/787.b1b2ad4d.chunk.js": "/ecomerce-to-best/static/js/787.b1b2ad4d.chunk.js",
     "static/media/titillium-web-all-400-normal.woff": "/ecomerce-to-best/static/media/titillium-web-all-400-normal.1b8b406fb7c2e9939922.woff",
     "static/media/titillium-web-latin-400-normal.woff2": "/ecomerce-to-best/static/media/titillium-web-latin-400-normal.55b29b135a9838d9e0f7.woff2",
     "static/media/titillium-web-latin-ext-400-normal.woff2": "/ecomerce-to-best/static/media/titillium-web-latin-ext-400-normal.fc46e868e0ca6c2fa856.woff2",
     "index.html": "/ecomerce-to-best/index.html",
     "main.eb509932.css.map": "/ecomerce-to-best/static/css/main.eb509932.css.map",
-    "main.a3589454.js.map": "/ecomerce-to-best/static/js/main.a3589454.js.map",
+    "main.2992efb7.js.map": "/ecomerce-to-best/static/js/main.2992efb7.js.map",
     "787.b1b2ad4d.chunk.js.map": "/ecomerce-to-best/static/js/787.b1b2ad4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eb509932.css",
-    "static/js/main.a3589454.js"
+    "static/js/main.2992efb7.js"
   ]
 }
