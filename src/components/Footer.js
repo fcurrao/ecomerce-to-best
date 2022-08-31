@@ -20,12 +20,12 @@ const Footer = () => {
                 <Row>
                     <Col sm={2}></Col>
                     <Col sm={8}  className="greenProyect-lg">
-                        <img src="./assets/img/otras/fl.png" className="imgLogoEco"></img>
+                        <img src="../assets/img/otras/gp.svg" className="imgLogoEco"></img>
                         <div className="texto">
-                            <h2>Fluit Green Proyect</h2>
-                            <p className='pp'>Cada año, 8 millones de toneladas de plástico desaparecen en el océano.<span className="strong"> Tenemos que hacer algo al respecto.</span></p>
+                            <h2>Green Proyect</h2>
+                            <p className='pp'>Cada año, 8 millones de toneladas de plástico desaparecen en el océano.<span className="strong"> Tenemos que hacer algo al respecto. GreenPeace</span></p>
                         </div>
-                        <Button variant="dark">Entrar</Button>{' '}
+                        <a className="nav-link disabled " href="https://www.greenpeace.org/argentina/" target="_blank" > <Button variant="dark">Entrar</Button>{' '}</a>
                     </Col>
                     <Col sm={2}></Col>
                 </Row>
@@ -38,13 +38,13 @@ const Footer = () => {
                 <Row>
                     <Col sm={2}></Col>
                     <Col sm={8}  className="rojosangre greenProyect-lg">
-                        <img src="./assets/img/otras/pincha.png" className="imgLogoEco"></img>
+                        <img src="../assets/img/otras/pincha.png" className="imgLogoEco"></img>
                         <div className="texto">
                             <h2 className='titu'>Pinchas hasta la medula</h2>
                             <p className='pp'>Sabias que con tu donacion de medula, en menos de 3 horas, podes salvarle la vida a alguien?.
                                 <span className="strong"> Se un heroe en vida!. Conocenos..</span></p>
                         </div>
-                        <Button variant="dark">Te sumas?</Button>{' '}
+                        <a className="nav-link disabled " href="http://www.pinchashastalamedula.ar" target="_blank" > <Button variant="dark">Te Sumas ?</Button>{' '}</a>
                     </Col>
                     <Col sm={2}></Col>
                 </Row>
@@ -56,7 +56,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col sm={12} className="center">
-                        <img src="./assets/img/otras/logo.jpg" className="imgLogoEco"></img>
+                        <img src="../assets/img/otras/logo.jpg" className="imgLogoEco"></img>
                         <h4>Condiciones y Accesos</h4>
                     </Col>
                 </Row> 

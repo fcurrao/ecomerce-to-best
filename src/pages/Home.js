@@ -57,7 +57,11 @@ const Home = () => {
                 <div className='listaDeProductos' >
                     
                     <div className='tituloDeDiv'> </div>
-                    <Catalogo data={listProducts} />
+                    {console.log(listProducts)}
+                    {listProducts.length == 0? <> 
+                    <div className='nohay textoCentrado'><h2 className='textoCentrado titulo'> No hay productos aun</h2></div>
+                     </>: <>
+                    <Catalogo data={listProducts} /> </>}
  
                 </div>
 

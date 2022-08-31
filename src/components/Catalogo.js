@@ -32,7 +32,7 @@ const Catalogo = ({ data }) => {
                                  }
 
                             <div className='divDeImagen'>
-                                <img className='imagenEnCatalogo' src={`./assets/img/${product.image}`} alt="Imagen producto" />
+                                <img className='imagenEnCatalogo' src={`/assets/img/${product.image}`} alt="Imagen producto" />
                                 <div className='datosDelProducto'> </div></div>
                             <div className='datosDelProductoTexto'>
                                 <h6 className='textnegro'> <h6 className='textrojo'>{product.title}</h6>  </h6>

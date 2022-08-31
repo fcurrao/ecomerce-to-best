@@ -5,6 +5,16 @@ const CartContext = createContext()
 const CartProvider = ({ children }) => {
 
 
+    const [ showCart, setShowCart ]= useState()
+
+
+
+
+    // EXPORT:
+     const dataa = { showCart, setShowCart}
+
+
+
     // const [cantidadXCarro, setCantidadXCarro] = useState(0)
     // const [cartProducts, setCartProducts] = useState([])
     // const [quantitiSelected, setQuantitiSelected] = useState(0)
@@ -114,11 +124,10 @@ const CartProvider = ({ children }) => {
 
 
     return (
-        <CartContext.Provider 
-        // value={dataa}
-        >
-            {/* <CartContext.Provider value={namee,apellidoo}></CartContext.Provider> */}
+        <CartContext.Provider   value={dataa} >
+
             {children}
+            
         </CartContext.Provider>
 
     )

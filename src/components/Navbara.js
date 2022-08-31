@@ -27,6 +27,8 @@ const Navbara = () => {
       <Link to={`/categorias/Peijing`}>   <div className="margensitos"> Peijing</div></Link>
       
       </NavDropdown> 
+      <Link to={`/About`}> <div className="margensitos"> Nosotros</div></Link>
+      <Link to={`/Contact`}> <div className="margensitos"> Contactanos</div></Link>
     </div>
     <div className='barraBusqueda'>
     <div className='inputseearch'>
