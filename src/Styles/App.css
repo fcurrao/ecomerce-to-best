@@ -3,113 +3,15 @@
 
 
 
-/* ***************** */
-/*  CUANDO ES GRANDE */
-/* ***************** */
-
-@media only screen and (min-width: 702px) {
-
-
-    /* .seBorraEnGrande {
-        display: none !important;
-    } */
-
-
-}
-
 
 
 /* ***************** */
-/*  CUANDO ES MEDIANO */
+/* 1
 /* ***************** */
 
-@media only screen and (max-width: 990px) {
+@media (min-width:40px) and (max-width:799px) {
 
 
-    .whtsimag {
-        z-index: 7000;
-        width: 12%;
-    }
-
-    .contenedorDeLinks {
-        display: flex;
-        width: 50% !important;
-        align-content: flex-end;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 120px;
-        margin-left: 20px;
-    }
-
-    .barraBusqueda { 
-        width: 50%;
-        margin-left: 150px;
-    }
-
-
-    /* 
-    .cadaUnoDelCatalogo {
-        height: 260px;
-        width: 310px;
-        float: left;
-        margin: 2px !important;
-        padding: 5px;
-        border: solid;
-    }
- */
-    /* 
- .greenProyect {
-    zoom: 80%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: space-evenly;
-}
-
-.listaDeProductos{
-    border: none !important
-}
- 
-#root {
-    zoom: 70% !important
-}
-
-.footer {
-    zoom: 70%; 
-}
-
-
-.texto {
-    width: 200px;
-    zoom: 80%;
-    margin-left: 0px !important;
-}
-
-
-.btn:not(:disabled):not(.disabled) {
-    margin-left: 220px;
-    margin-bottom: 40px;
-    zoom: 80%
-}
-
-.pp {
-    width: 450px;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-     */
-
-
-}
-
-
-/* ***************** */
-/*  CUANDO ES CHICO */
-/* ***************** */
-
-@media only screen and (max-width: 775px) {
     /* 
     .cadaUnoDelCatalogo {
         height: 260px;
@@ -122,18 +24,111 @@
     
 */
 
+.texto{
+    zoom:90%
+}
+
+.titu{
+    zoom:90%
+}
+
+.pp{
+    zoom:90%
+}
+
+.redondel {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: min-content;
+    height: min-content;
+    z-index: 7000;
+}
+
+.whtsimag {
+    z-index: 7000;
+    width: 12%;
+}
+.divTitulo{
+    zoom: 80%;
+}
+.centrado{
+zoom: 76% !important;
+}
+
+.container {
+    margin-top: 250px !important;
+}
+
+.inputseearch {
+    width: 70% !important;
+    height: 100% !important;
+    zoom: 90%;
+}
+
+    .contenedorDeLinks {
+        display: flex;
+        background-color: #f4f4f4 !important;
+        height: 40px;
+        text-align: center;
+        width: 60%;
+        color: black;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        zoom: 90%;
+    }
+    .textosUsuario {
+        display: flex;
+        zoom: 90%;
+    }
+    .footer { 
+        padding: 0px !important;
+    }
+
+    .cuerpoFooter{
+        zoom: 80%;
+    }
+    
+    .firmadiv{
+           position: relative;
+    right: 10px;
+    font-size: 14px;
+    bottom: -310px; 
+    width: min-content;
+    height: min-content;
+    }
+
+    .firma{
+        position: relative;
+        right: 59px;
+        font-size: 14px;
+        bottom: -235px;
+        width: min-content;
+        height: min-content;
+    }
+
+    .pp {
+        display: none
+    }
+
+    .gp{
+        margin-top: 0px !important;
+    }
+
 
     #root {
         zoom: 70% !important
     }
 
     .greenProyect {
-        zoom: 80%;
+        width: 100% !important;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .listaDeProductos {
@@ -141,3 +136,30 @@
     }
 
 }
+
+
+/* ***************** */
+/* 2
+/* ***************** */
+
+
+@media (min-width:799px) and (max-width:999px) {
+
+#root{
+    zoom:70%
+}
+
+.texto{
+    zoom:70%
+}
+
+.titu{
+    zoom:70%
+}
+
+.pp{
+    zoom:70%
+}
+}
+
+    /*************************************** */

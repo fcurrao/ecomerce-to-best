@@ -16,7 +16,7 @@ const Footer = () => {
     return(<> 
      
 <Container fluid className="greenProyect">
-            <Container>
+            <Container className="gp">
                 <Row>
                     <Col sm={2}></Col>
                     <Col sm={8}  className="greenProyect-lg">
@@ -119,7 +119,7 @@ const Footer = () => {
                     </Col>
                 </Row>    
             </Container>    
-            <div><h6 className='firma'> ©2020. by GQUE</h6></div>
+            <div  className='firmadiv'><h6 className='firma'> ©2020. by GQUE</h6></div>
             
         </Container> 
        
