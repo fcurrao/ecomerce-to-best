@@ -33,7 +33,7 @@ const Footer = () => {
         </Container>
 
 
-        <Container fluid className="pinchahastalamedula greenProyect">
+        <Container fluid className=" pinchahastalamedula greenProyect">
             <Container>
                 <Row>
                     <Col sm={2}></Col>
@@ -52,8 +52,8 @@ const Footer = () => {
         </Container>
 
 
-        <Container fluid className="footer">
-            <Container>
+        <Container fluid className=" gp footer">
+            <Container  className="gp">
                 <Row>
                     <Col sm={12} className="center">
                         <img src="../assets/img/otras/logo.jpg" className="imgLogoEco"></img>
@@ -101,6 +101,7 @@ const Footer = () => {
                             <h5>Politica de Calidad</h5>
                             <p>Garantias y Soporte</p>
                             <p>Foros y Bolg</p>
+                            <div  className='firmadiv'><h6> ©2020. by GQUE</h6></div>
                         </div>
                     </Col>
                 </Row>
@@ -116,10 +117,12 @@ const Footer = () => {
                         <i className="fa-brands fa-instagram fa-1x"></i>
                         <i className="fa-brands fa-twitter fa-1x"></i>
                         <i className="fa-brands fa-youtube fa-1x"></i>
+                         
                     </Col>
                 </Row>    
+              
             </Container>    
-            <div  className='firmadiv'><h6 className='firma'> ©2020. by GQUE</h6></div>
+    
             
         </Container> 
        
