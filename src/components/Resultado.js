@@ -2,28 +2,41 @@ import '../Styles/App.sass'
 import '../Styles/App.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { CartContext } from '../context/CartContext';
+import { useContext } from 'react'
 
-const Catalogo = ({ data }) => {
+
+const Resultado = ({ data }) => {
 
     const { title, description, price, image } = data
     const [processToAdd, setProcessToAdd] = useState(false)
+ 
 
+    
+  const { resultado, setResultado, newSearch, setNewSearch, listProducts, setListProducts, listaDeUsarios, setListaDeUsarios, showCart, setShowCart, setHayUsuario, hayUsuario, showLogIn, setshowLogIn, busqueda, setbusqueda, showLogin, setShowLogin, showModal, setShowModal, showSalir, setShowSalir, showRegistrarse, setShowRegistrarse, userOK, setUserOK, formDataUser, setFormdataUser
+  } = useContext(CartContext)
+
+ 
     const agregandoAlCarro = () => {
         setProcessToAdd(true)
     }
 
+
+    
+
     return (
         <>
+         
             <section className='centrado'>
 
-
-                {data.map((product) => {
+                
+                {resultado.map((product) => {
                     return <>
 
                         <div className="cadaUnoDelCatalogo">
 
 
-
+  
                             {product.delivery == true ?
                                 <>   <div className='deliverySinCargo'>Envio a CABA gratis!</div></>
                                 :
@@ -103,5 +116,5 @@ const Catalogo = ({ data }) => {
 
 
 
-export default Catalogo
+export default Resultado
 

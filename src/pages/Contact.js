@@ -2,8 +2,14 @@ import '../Styles/App.sass'
 import '../Styles/App.css'
 import "../pages/pages.css"
 import swal from 'sweetalert';
+import Resultado from '../components/Resultado';
+
+import { CartContext } from '../context/CartContext';
+import { useContext } from 'react'
 
 const Contact = () => {
+    const { resultado, setResultado, newSearch, setNewSearch, listProducts, setListProducts, listaDeUsarios, setListaDeUsarios, showCart, setShowCart, setHayUsuario, hayUsuario, showLogIn, setshowLogIn, busqueda, setbusqueda, showLogin, setShowLogin, showModal, setShowModal, showSalir, setShowSalir, showRegistrarse, setShowRegistrarse, userOK, setUserOK, formDataUser, setFormdataUser
+    } = useContext(CartContext)
 
 
 const enviarcontacto = (e) =>{
@@ -29,18 +35,23 @@ e.preventDefault()
 
 
 
-      return (
+      return (  <>
+        {newSearch? <>
+            <Resultado data={listProducts} />   
+        </> : <>
+
+
+       
  
            
 
-<section className="zoomosetentaycinco">
- 
-<h1 className="titulo centrado">Contacto</h1>
+<section className="zoomosetentaycinco centrado">
+  
 
 <div className="mediapag">
-<div className="texto">
-<h2 >Contactanos</h2>
-<h3 className="subtexto"><br/>
+<div className="titulo texto ">
+<h2 className="titulo">Contactanos</h2>
+<h3 className="titulo subtexto "><br/>
 Direción: <br/>
 Av. Santa Fe 988, Microcentro. CABA
 <br/><br/>
@@ -48,14 +59,14 @@ Teléfono: <br/>
 11-56062096
 <br/><br/>
 Email: <br/>
-info@naturaldeli.com.ar
+info@bonsaisorlando.com.ar
 <br/>
 </h3>
 <br/>
 
  
 <br/>
-Natural Deli
+Bonsais Orlando
 </div>
 <br/>
 <div className="imagen">
@@ -127,7 +138,7 @@ Natural Deli
       </section>
 
 
-
+      </>} </>
       )
 
 

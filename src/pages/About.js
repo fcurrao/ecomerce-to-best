@@ -1,20 +1,29 @@
 import '../Styles/App.sass'
 import '../Styles/App.css'
 
+import Resultado from '../components/Resultado';
+import { CartContext } from '../context/CartContext';
+import { useContext } from 'react'
+
 const About = () => {
 
+    const { resultado, setResultado, newSearch, setNewSearch, listProducts, setListProducts, listaDeUsarios, setListaDeUsarios, showCart, setShowCart, setHayUsuario, hayUsuario, showLogIn, setshowLogIn, busqueda, setbusqueda, showLogin, setShowLogin, showModal, setShowModal, showSalir, setShowSalir, showRegistrarse, setShowRegistrarse, userOK, setUserOK, formDataUser, setFormdataUser
+    } = useContext(CartContext)
 
-return (
+return (  <>
+        {newSearch? <>
+            <Resultado data={listProducts} />   
+        </> : <>
+
+ 
+
+<section className="zoomosetentaycinco  centrado mediapag"> 
 
 
-<section className="zoomosetentaycinco">
-<h1 className="titulo centrado">About Us</h1>
-
-
-<div className="mediapag">
+<div className="mediapag ">
 <div className="texto">
-<h2 >Natural Deli</h2>
-<h3 className="subtexto">La alimentación está cambiando y cada vez somos más quienes participamos de esta transformación. Existen nuevas alternativas para llevar una vida sana y saludable, respetando el medioambiente y apoyando la sustentabilidad.
+<h2 className="titulo subtexto " >Bonsais Orlando</h2>
+<h3 className="titulo subtexto ">La alimentación está cambiando y cada vez somos más quienes participamos de esta transformación. Existen nuevas alternativas para llevar una vida sana y saludable, respetando el medioambiente y apoyando la sustentabilidad.
 </h3>
 <br/>
 
@@ -31,7 +40,7 @@ Importante! La alimentación por ser saludable no* tiene porque ser aburrida ni 
 Natural Deli
 </div>
 <br/>
-<div className="imagen">
+<div className="imagenabout">
 <img src={"../assets/img/otras/nosotros.jpg"} alt="Imagen producto" />
 
 </div>
@@ -40,7 +49,7 @@ Natural Deli
       </section>
 
 
-
+      </>} </>
 )
 
 

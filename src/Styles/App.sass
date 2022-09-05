@@ -4,8 +4,11 @@ $colorMarron: brown
 $letraTamanoGral: 28px
 $letraTamanoGralMitad: 18px
 
+#root
+  zoom:90% 
+
 .padding
-  padding: 20px
+  padding: 10px
 
 .App
   text-align: center
@@ -13,6 +16,9 @@ $letraTamanoGralMitad: 18px
   font-family: 'Titillium Web', sans-serif
   padding: 10px
 
+.www
+  color: white !important
+  
 .body
   font-family: 'Titillium Web', sans-serif
   padding: 10px
@@ -25,7 +31,8 @@ $letraTamanoGralMitad: 18px
   line-height: 1.2
 
 .titulo
-  font-size: $letraTamanoGral
+  font-size: $letraTamanoGral !important
+  font-family: "Poppins", Sans-serif
 
 .subtitulo
   font-size: $letraTamanoGralMitad
@@ -128,27 +135,26 @@ $letraTamanoGralMitad: 18px
 .datosDelProducto
   position: relative
   background-color: #414141
-  top: -121px
   opacity: 0.0
-  top: -158px
+  top: -200px
   margin: 0 auto
-  height: 270px
+  height: 265px
   z-index: 3
 
 .datosDelProducto:hover
-  opacity: 0.1
+  opacity: 0.2
   cursor: pointer
 
 .cartwidget
   background-color: white
   font-size: 12px
-  height: 80px
+  height: 40px
   display: flex
   flex-direction: row
   flex-wrap: nowrap
   justify-content: space-between
   align-items: center
-  margin: 0
+  margin: 0.4%
 
 .redondel
   position: fixed
@@ -200,8 +206,8 @@ $letraTamanoGralMitad: 18px
   top: 4px
 
 .fotito
-  width: 94px
-  height: 64px
+  width: 84px
+  height: 44px
 
 .textosUsuario
   display: flex
@@ -393,6 +399,7 @@ $letraTamanoGralMitad: 18px
 
 .texto
   width: 400px
+  zoom: 75%
 
 .center
   display: flex
@@ -472,8 +479,38 @@ $letraTamanoGralMitad: 18px
 
 .svg3
   width: 20px
+  cursor: pointer
+
+.sectorArriba
+  padding: 2%
+  display: flex
+  text-align: center
+  flex-direction: row
+  flex-wrap: nowrap
+  align-content: space-between
+  align-items: center
+  justify-content: space-evenly
+
+.sectorOpciones
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  align-content: center
+  justify-content: center
+  align-items: center
 
 .opcionesDeCadaProducto
+  display: flex
+  justify-content: space-around
+  flex-direction: row
+  flex-wrap: nowrap
+  align-content: space-around
+  align-items: center
+
+.opcionesDeCadaProducto2
+  text-decoration-color: white !important
+  background-color: black !important
+  color: white !important
   display: flex
   justify-content: space-around
   flex-direction: row
@@ -493,3 +530,10 @@ $letraTamanoGralMitad: 18px
   background-color: #743838
   height: 80px
   font-size: 14px
+
+.mediapag
+  display: flex
+  justify-content: space-evenly 
+
+.imagenabout
+  margin-left: 3%

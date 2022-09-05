@@ -5,6 +5,8 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// CUANDO SE LOOP, CAMBIAR ESTA PARTE Y AGREGAR TODAS LAS DB EN FIREBASE
+
 const firebaseConfig = {
   apiKey: "AIzaSyAjXh0dV-LV12z-MPBZQpVSG5J5dg9O_Gc",
   authDomain: "bonsaisorlando.firebaseapp.com",

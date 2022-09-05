@@ -6,13 +6,14 @@ import Home from './pages/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbara from './components/Navbara';
 import Footer from './components/Footer';
-import Contact from './components/Contact';
-import About from './components/About';
+import Contact from './pages/Contact';
+import About from './pages/About';
 import { useParams } from 'react-router-dom'
 // import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 // import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 // import Modal from './components/Modal/Modal';
-// import Detail from './pages/Detail';
+import Detail from './pages/Detail';
+import Perfil from './components/Perfil'
 // import Products from './pages/Products';
 // import Descuento from './pages/Descuento';
 // import Checkout from './pages/Checkout';
@@ -20,6 +21,7 @@ import CartProvider from './context/CartContext';
 import { CartContext } from './context/CartContext';
 import BarraCart from './components/BarraCart';
 import Oferta from './components/Oferta';
+import Registrarse from './components/Registrarse';
 
 function App() {
   return (<>
@@ -37,10 +39,10 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
              <Route path="/about" element={<About />} />
-            {/* <Route path="/descuento/:filtradito" element={<Descuento />} /> */}
-            {/* <Route path="/productos/" element={<Products />} /> */}
-            {/* <Route path="/productos/:id" element={<Detail />} /> */}
-            {/* <Route path="/categorias/:categoryid" element={<ItemListContainer />} /> */}
+            <Route path="/Registrarse" element={<Registrarse />} />
+            <Route path="/productos/" element={<Home />} />
+            <Route path="/productos/:id" element={<Detail />} />
+            <Route path="/Perfil" element={<Perfil />} />  
             {/* <Route path="/cart" element={<Checkout />} /> */}
             <Route path="*" element={<h1 className='centrado margenes'>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
           </Routes>

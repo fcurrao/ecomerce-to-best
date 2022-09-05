@@ -8,15 +8,20 @@ import { useParams } from 'react-router-dom'
 import Catalogo from '../components/Catalogo'
 import ElCarousel from '../components/ElCarousel'
 import Container from "react-bootstrap/Container";
+import Resultado from '../components/Resultado'
+
+import { CartContext } from '../context/CartContext';
+import { useContext } from 'react'
 
 const Home = () => {
 
     // const [showModal, setShowModal] = useState(false)
     // const {image, title, description, price , qty , tamano} = listProducts 
 
-    const { categoryid } = useParams()
-    const [listProducts, setListProducts] = useState([])
-
+    const { categoryid } = useParams() 
+    
+  const { resultado, setResultado, newSearch, setNewSearch, listProducts, setListProducts, listaDeUsarios, setListaDeUsarios, showCart, setShowCart, setHayUsuario, hayUsuario, showLogIn, setshowLogIn, busqueda, setbusqueda, showLogin, setShowLogin, showModal, setShowModal, showSalir, setShowSalir, showRegistrarse, setShowRegistrarse, userOK, setUserOK, formDataUser, setFormdataUser
+  } = useContext(CartContext)
 
 
     useEffect(() => {
@@ -39,15 +44,21 @@ const Home = () => {
                 })))
 
         }
+  
+    
     }, [categoryid])
 
+// busquedaid
 
 
     return (
         <>
+        {newSearch? <>
+            <Resultado data={listProducts} />   
+        </> : <>
             {/* <ElCarousel  /> */}
-            <Container>
             {/* <ItemListContainer titulo="Listado de Productos" filtro=""/> */}
+            <Container>
             <section className='paginaPrincipal'>
                 <div className='divTitulo'>
                     <h1 className="textoCentrado titulo">Bonsais Orlando</h1>
@@ -67,8 +78,9 @@ const Home = () => {
 
 
             </section>
-                </Container>
-        </>
+               
+    
+        </Container></>}</>
     )
 }
 

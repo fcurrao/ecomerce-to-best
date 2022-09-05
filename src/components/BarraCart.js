@@ -3,6 +3,8 @@ import '../Styles/App.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { CartContext } from '../context/CartContext';
+import { useContext } from 'react'
+
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import CartWiew from './CartView';
@@ -10,33 +12,10 @@ import swal from 'sweetalert';
 
 const BarraCart = () => {
 
+ const {listaDeUsarios, setListaDeUsarios, showCart, setShowCart, setHayUsuario, hayUsuario, showLogIn, setshowLogIn, busqueda, setbusqueda, showLogin, setShowLogin, showModal, setShowModal, showSalir,setShowSalir, showRegistrarse, setShowRegistrarse, userOK, setUserOK, formDataUser, setFormdataUser
+ } = useContext(CartContext)
 
-
-  const [showCart, setShowCart] = useState(false)
-
-  const [showLogIn, setshowLogIn] = useState(false)
-
-
-  const [busqueda, setbusqueda] = useState()
-  const [showLogin, setShowLogin] = useState(false)
-  const [showModal, setShowModal] = useState(false)
-
-  const [showSalir, setShowSalir] = useState(false)
-const [hayUsuario, setHayUsuario] = useState(false)
-
-  const [showRegistrarse, setShowRegistrarse] = useState(false)
-  const [userOK, setUserOK] = useState({
-    password: '',
-    password2: '',
-    email: '',
-    email2: ''
-  })
-  const [formDataUser, setFormdataUser] = useState({
-    password: '',
-    password2: '',
-    email: '',
-    email2: ''
-  })
+ 
 
 
 
@@ -114,7 +93,6 @@ const [hayUsuario, setHayUsuario] = useState(false)
           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
         </svg>
         
-        { console.log( hayUsuario)}
         {hayUsuario ? <> 
           <a className="ptext" href="#" onClick={() => abrirLogin()} ><p className='negrita'>{userOK.email}</p> </a>
           </>: <>
@@ -172,7 +150,7 @@ const [hayUsuario, setHayUsuario] = useState(false)
 
                 
                 <h5> Email: {userOK.email}  </h5><br></br>
-                <Link to="/" className="ptext" href="#">   <button className='margenesch'  > Mi Perfil</button><br></br> </Link>  
+                <Link to="/perfil" className="ptext" href="#">   <button className='margenesch'  > Mi Perfil</button><br></br> </Link>  
                                             
                 <Link to="/" className="ptext" href="#">     <button className='margenesch'  >  Mis Ordenes</button><br></br> </Link>  
                 <Link to="/" className="ptext" href="#">       <button className='margenesch'  >  Mi Carrito</button><br></br> </Link>  
