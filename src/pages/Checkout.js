@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import "../pages/pages.css"
 import { Link } from 'react-router-dom'
 import Modal from '../components/Modal'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import db from '../firebaseConfig'
 import { collection, addDoc } from 'firebase/firestore'
 
@@ -17,6 +17,7 @@ const Checkout = () => {
     const { cartProducts, clear, removeProductToCart } = useContext(CartContext)
     const { totalPrice } = useContext(CartContext)
     const [succes, setSucces] = useState()
+    const [unidadesAComprar, setUnidadesAComprar] = useState()
     const [showModal, setShowModal] = useState(false)
     const [order, setOrder] = useState({
         items: cartProducts.map((product => {
@@ -25,7 +26,7 @@ const Checkout = () => {
                 title: product.title,
                 qty: product.qty,
                 price: product.price
-            }
+            } 
         })),
         buyer: {},
         date: new Date().toLocaleString(),
@@ -39,7 +40,6 @@ const Checkout = () => {
         email: '',
 
     })
-
 
     // w.target.name (queda: name, phone y email)
     const handleChange = (e) => {
@@ -89,6 +89,7 @@ const Checkout = () => {
                                 total = subtotal + total
                             }
                             return <>
+                           
                                 <div 
                                 style={{ boxShadow: "30px 0  30px black", margin:"40px", width:"min-content" }}
                                  className="item-product hoverr">
@@ -100,7 +101,10 @@ const Checkout = () => {
                                         <span className="chiquito1 badge badge-warning">{product.category}</span>
                                         {/* <p className='description2'>Producto Organico</p> */}
                                         <h4 >{product.title}</h4> 
-                                        <h6 className='description2 azul'>{product.qty} unidades </h6>
+                                        {/* <button onClick={()=>restaUnidad(unidadesAComprar,product.id)}>-</button> */}
+                                        <h6 className='description2 azul'> {product.qty} unidades </h6>
+                                        {/* <button onClick={()=>sumaUnidad(unidadesAComprar,product.id, product.stock)}>+</button> */}
+                                       
                                                                                  <h6 className='description2'>$ {product.price}</h6>
                                         <span className="btn2 btn btn-primary"> Total: {subtotal} </span> 
                                         <div style={{margin:"35px", display:"flex"}}>
@@ -118,15 +122,8 @@ const Checkout = () => {
                         
                     </div>
                     <div style={{display:"flex" , flexDirection:"column", alignItems:"center"}}> 
-                        <h3 className='margin2 float-left'>Total del Carro: {total}</h3>
-                        *********************************************************
-                        <h5>FACTURA:</h5>
-                    {cartProducts.map((product) => { 
-                            return <>
-                           
-                        {product.title} ➡ {product.qty}x{product.price}💲  = {subtotal}$<br></br>
-                        </>})}
-                        <h5>   Total del Carro: {total}$</h5>
+                        <h3 className='margin2 float-left'>Total del Carro: {total} $</h3>
+                       
 
 
                     </div>
@@ -138,7 +135,7 @@ const Checkout = () => {
                     </div>
                     <div  style={{display:"flex", flexDirection: "row", justifyContent:"center", margin:"10px"}} className='medioo'> 
                         <button  style={{  margin:"10px"}} className="btn-dark btn btn-group2 bttn float-left margin4"> Mas Info</button>
-                        <button  style={{  margin:"10px"}}  className="btn-warning btn btn-group2 bttn  float-left margin4 red" onClick={clear}>Limpiar Carrito</button>
+                        <button  style={{  margin:"10px"}}  className="btn-danger btn btn-group2 bttn  float-left margin4 red" onClick={clear}>Limpiar Carrito</button>
                     </div>
                                     <img className='margin2' style={{width:"100%"}}   src={`../assets/img/otras/tarjetas.png`} alt="Imagen tarjetas" />
                 </> : <div style={{display:"flex", flexDirection: "column"}}>
@@ -150,10 +147,29 @@ const Checkout = () => {
                 }
             </section>
             {showModal && <Modal title="Datos de contacto" setModalState={() => setShowModal(false)}>
+
+       
                 {succes ? <>
                     <h3>Su orden fue Generada correctamente  </h3><br />
-                    <p> Id de compra: <h2 className='red'>{succes}</h2></p>
+                    <p> Id de compra: <h2 className='red'>{succes}</h2></p><br></br>
+                    
+                    <h5>Muchas Gracias  </h5><br />
                 </> : <>
+
+                *******************************
+                        <h5>FACTURA:</h5>
+                    {cartProducts.map((product) => { 
+                         {
+                            subtotal = product.price * product.qty;
+                           
+                        }
+                            return <>
+                           
+                        {product.title} ➡ {product.qty}x{product.price} $  = {subtotal}$   <br></br>
+                        </>})}
+                        <h5>   Total del Carro: {total}💲</h5>
+                        *******************************
+
                     <h3>Formulario de compra</h3>
                     <form onSubmit={submitData}>
                         Name<input className='inputt' type='text'
@@ -206,7 +222,7 @@ const Checkout = () => {
                             value={formData.email2}
                             onChange={handleChange} /><br />
                         {(formData.name != "" && formData.apellido != "" && formData.phone != "" && formData.email != "") ?
-                            <button type="submit" > Enviar</button>
+                            <button  className="btn-success btn" style={{margin:"15px"}} type="submit" > COMPRAR</button>
                             : <></>}
                     </form></>}
             </Modal>}

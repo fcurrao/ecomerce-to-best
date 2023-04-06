@@ -45,7 +45,7 @@ e.preventDefault()
  
            
 
-<section className="zoomosetentaycinco centrado">
+<section style={{margin: "20px 200px"}} className="zoomosetentaycinco centrado">
   
 
 <div style={{margin: "10px"}}  className="mediapag">

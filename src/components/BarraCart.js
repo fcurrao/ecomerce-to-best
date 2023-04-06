@@ -116,7 +116,8 @@ const BarraCart = () => {
       }
        
         
-      <div style={{  display: cantidadXCarro > 0 ? 'block' : 'none', border:"1px black solid"}}> <a href="#" onClick={() => abrirCartView()} className="ptext" style={{position:"relaative", top:"7px", fontSize: "15px"}}> {cartProducts.length}  <svg className="svg1 bi bi-cart3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <div style={{  display: cantidadXCarro > 0 ? 'block' : 'none'}}> <a href="#" onClick={() => abrirCartView()} className="ptext"
+       style={{textDecoration:"none", position:"relaative", top:"7px", fontSize: "15px"}}> {cartProducts.length}  <svg className="svg1 bi bi-cart3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
           <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
       {cartProducts.length}    </svg>  =>  {totalPrice}$ </a><div></div></div>
       {console.log("aca", cartProducts)}
@@ -125,7 +126,7 @@ const BarraCart = () => {
           </div>
           <div className='contenedordeModal'>
             <div className='modalCart'>
-              <button className='botonCerrar' onClick={() => cerrarCartView()}>X</button>
+              <button className='btn-dark btn botonCerrar' style={{padding:0}}onClick={() => cerrarCartView()}>X</button>
               <div><h3 className="ptext subtitulo" >Mi carrito</h3></div>
               <CartWiew />
 

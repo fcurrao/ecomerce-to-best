@@ -17,7 +17,7 @@ return (  <>
 
  
 
-<section className="zoomosetentaycinco  centrado mediapag"> 
+<section  style={{margin: "20px 0px"}} className="zoomosetentaycinco  centrado mediapag"> 
 
 
 <div style={{margin: "10px"}} className="mediapag ">

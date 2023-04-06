@@ -12,6 +12,7 @@
 }
 
 .cartviewxitem{
+    background-color: rgb(200, 200, 200);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

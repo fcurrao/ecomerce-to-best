@@ -89,6 +89,7 @@ const Navbara = () => {
           </NavDropdown>
           <Link to={`/About`}  > <div onClick={limpiandoSearch} className="margensitos" > Nosotros</div></Link>
           <Link to={`/Contact`}> <div onClick={limpiandoSearch} className="margensitos"> Contactanos</div></Link>
+          <Link to={`/Ayuda`}> <div onClick={limpiandoSearch} className="margensitos"> Como comprar/Ayuda</div></Link>
         </div>
         <div className='barraBusqueda'>
           <div className='inputseearch' id='inputsearch'>

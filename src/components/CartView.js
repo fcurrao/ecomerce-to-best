@@ -84,16 +84,16 @@ const CartWiew = () => {
 
 
                                             </div>
-                                            <div><h5 className='ptext subtitulo'>{product.qty} Unidades   Subtotal: {subtotal}  </h5>
+                                            <div><h5 className='ptext subtitulo'>{product.qty} Unidades   <br></br>Subtotal: {subtotal}  </h5>
                                         </div>
 
-                                            <div style={{display:"flex"}}>
+                                            <div style={{display:"flex", flexDirection:"column", margin:"5px"}}>
                                                 <button className="btn btn-group2 bttn" onClick={() => removeProductToCart(product)}>Remover</button>
 
 
 
                                                 <Link to={`/productos/${product.id}`}>
-                                                    <button  onClick={cerrarModalCart}  className="btn btn-group2 bttn" >Agregar mas</button>
+                                                    <button  onClick={cerrarModalCart} style={{width:"-webkit-fill-available"}} className="btn btn-group2 bttn" >Agregar mas</button>
                                                 </Link>
 
                                             </div>
@@ -105,13 +105,13 @@ const CartWiew = () => {
                                 </>
 
                             })}
-                            <div className="ajam">
+                                <h3 className='item-productx margin float-left ptext subtitulo'>Total del Carrito: {total} $</h3><br></br><br></br><br></br>
+                            <div  style={{display: "flex" , margin:"10px 25px" }}    className="ajam">
 
-                                <h3 className='item-productx margin float-left ptext subtitulo'>Total del Carro: {total}</h3>
                                 <Link to={`/cart`}>
-                                    <button  onClick={cerrarModalCart} className="btn btnp btn-group2 bttn" > VER MI CARRO</button>
+                                    <button  onClick={cerrarModalCart} className="btn-success btn btnp btn-group2 bttn" > VER MI CARRITO</button>
                                 </Link>
-                                <button className="btn btn-group2 bttn" onClick={clear}>Limpiar Carrito</button>
+                                <button className="btn-danger btn btn-group2 bttn" onClick={clear}>Limpiar Carrito</button><br></br><br></br>
                             </div>
                         </div> 
                     </div>

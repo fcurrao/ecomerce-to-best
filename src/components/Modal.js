@@ -6,11 +6,21 @@ import { useContext } from 'react'
 
 const Modal = ({ setModalState, children }) => {
 
-    return (
-        <div className="modal-custom">
-            <button className="zz" onClick={() => setModalState(false)}>X</button>
-            {children}
-        </div>
+    return (<>
+
+          <div className='todoOpacity'>
+          </div>
+          <div className='contenedordeModal'>
+             <div style={{width:"60%",  position:"absolute" , left:"20%"}}  className='modalCart'>
+          <button className='btn-dark btn botonCerrar' style={{padding:0}}onClick={() => setModalState(false)}>X</button>
+                <div><h3  style={{textAlign:"center" , marginBottom: "30px"}}className="ptext subtitulo" >{children}</h3></div>
+            
+
+             </div>
+            </div>
+        </> 
+ 
+     
     )
 }
 
