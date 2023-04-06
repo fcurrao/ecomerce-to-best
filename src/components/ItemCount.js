@@ -7,8 +7,8 @@ import swal from 'sweetalert';
 const ItemCount = ({productData,stock,initial}) => {
 
     const { addProductToCart, cartProducts, clear, removeProductToCart, setQuantitiSelected , setCantidadXCarro, removeONEProductToCart, cantidadXCarro } = useContext(CartContext)
-     
-    setQuantitiSelected(0)
+
+    // setQuantitiSelected(0)
     const [counter, setCounter] = useState(initial) 
 
     const addNumber = () => {
@@ -21,13 +21,13 @@ const ItemCount = ({productData,stock,initial}) => {
     }}
 
     const alertAgregando = () =>{
-        swal("Genial..", "Los Item se agregaron a tu carrito");
+        swal("AGREGADOS!..", `${counter } unidades de el producto ${productData.title} se agregaron a tu carrito`);
     }
 
     const onAdd = () =>{
         setQuantitiSelected(counter)
-        setCantidadXCarro(counter)
-        addProductToCart(productData,counter)
+        setCantidadXCarro(counter)   
+        addProductToCart(productData,counter)    
         console.log("producto: ",productData) 
         console.log("aaa: ,", cantidadXCarro)
         alertAgregando()
@@ -36,12 +36,17 @@ const ItemCount = ({productData,stock,initial}) => {
 
 return(
 
- <div className='countProd columnn'>
-<div className='roww'>
+ <div style={{ display: "flex" , flexDirection:"column"}}  className='countProd columnn'>
+<div style={{ display: "flex" , flexDirection:"row", alignItems: "center", justifyContent: "space-between"}} > 
  <button className="btn btn-group2" onClick={removeNumber}>- </button>
-     <p>{counter}</p>
+     <p  className="btn btn-outline-dark" >{counter}</p>
      <button className="btn btn-group2" onClick={addNumber} >+</button>
      </div>
+     <div className='roww'>
+       SubTotal:  {counter * productData.price} $
+
+     </div>
+
      <div className='roww'>
 
      <button className="btn btn-group btnx bttn" onClick={onAdd} >Agregar al carro</button>

@@ -16,7 +16,7 @@ import Detail from './pages/Detail';
 import Perfil from './components/Perfil'
 // import Products from './pages/Products';
 // import Descuento from './pages/Descuento';
-// import Checkout from './pages/Checkout';
+import Checkout from './pages/Checkout';
 import CartProvider from './context/CartContext';
 import { CartContext } from './context/CartContext';
 import BarraCart from './components/BarraCart';
@@ -32,8 +32,7 @@ function App() {
           <div className="padding">
           <BarraCart />
           <Navbara />
-          <Routes>
-            <Route path="/ecomerce-to-best" element={<Home />} />
+          <Routes> 
             <Route path="/" element={<Home />} />
             <Route path="/categorias/:categoryid" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -43,7 +42,7 @@ function App() {
             <Route path="/productos/" element={<Home />} />
             <Route path="/productos/:id" element={<Detail />} />
             <Route path="/Perfil" element={<Perfil />} />  
-            {/* <Route path="/cart" element={<Checkout />} /> */}
+            <Route path="/cart" element={<Checkout />} />
             <Route path="*" element={<h1 className='centrado margenes'>ERROR 404 - PAGINA NO ENCONTRADA</h1>} />
           </Routes>
           <div className="redondel">  

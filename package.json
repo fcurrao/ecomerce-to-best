@@ -44,5 +44,17 @@
   },
   "devDependencies": {
     "firebase-tools": "^11.8.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcurrao/ecomerce-to-best.git" ' '
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fcurrao/ecomerce-to-best/issues"
+  },
+  "homepage": "http://localhost:3000/"
 }

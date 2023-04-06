@@ -53,7 +53,7 @@ const Home = () => {
 
     return (
         <>
-        {newSearch? <>
+        {newSearch? <> 
             <Resultado data={listProducts} />   
         </> : <>
             {/* <ElCarousel  /> */}
@@ -67,11 +67,12 @@ const Home = () => {
 
                 <div className='listaDeProductos' >
                     
-                    <div className='tituloDeDiv'> </div>
-                    {console.log(listProducts)}
+                    {/* <div className='tituloDeDiv'> </div> */}
+                    {/* {console.log(listProducts)} */}
                     {listProducts.length == 0? <> 
                     <div className='nohay textoCentrado'><h2 className='textoCentrado titulo'> No hay productos aun</h2></div>
                      </>: <>
+                     <div> <h3 className='textoCentrado titulo'>{categoryid}</h3></div>
                     <Catalogo data={listProducts} /> </>}
  
                 </div>

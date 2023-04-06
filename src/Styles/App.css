@@ -3,7 +3,13 @@
 
 
 
-
+.cadaUnoDelCatalogo:hover{
+    scale: 1.05;
+    box-shadow: 5px 5px 30px rgb(238, 194, 18);
+    transition: 100ms;
+    opacity: 0.92;
+    
+}
 
 /* ***************** */
 /* 1

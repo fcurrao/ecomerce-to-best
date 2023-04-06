@@ -159,7 +159,8 @@ const CartProvider = ({ children }) => {
         }
     }
 
-
+ 
+      
     const removeONEProductToCart = (product, qty) => {
         setCantidadXCarro(cantidadXCarro - qty)
         if (cartProducts.some(uno => uno.id == product.id)) {
@@ -190,7 +191,18 @@ const CartProvider = ({ children }) => {
 
 
     // EXPORT:
-     const dataa = { cantidadXCarro, cartProducts, clear, removeProductToCart, resultado, setResultado, newSearch, setNewSearch, listProducts, setListProducts, listaDeUsarios, setListaDeUsarios, showCart, setShowCart, setHayUsuario, hayUsuario, showLogIn, setshowLogIn, busqueda, setbusqueda, showLogin, setShowLogin, showModal, setShowModal, showSalir,setShowSalir, showRegistrarse, setShowRegistrarse, userOK, setUserOK, formDataUser, setFormdataUser
+     const dataa = {  cantidadXCarro, cartProducts, clear, removeProductToCart, resultado, setResultado, 
+        newSearch, setNewSearch, listProducts, setListProducts, listaDeUsarios, setListaDeUsarios, 
+        showCart, setShowCart, setHayUsuario, hayUsuario, showLogIn, setshowLogIn, busqueda, setbusqueda, 
+        showLogin, setShowLogin, showModal, setShowModal, showSalir,setShowSalir, showRegistrarse,
+         setShowRegistrarse, userOK, setUserOK, formDataUser, setFormdataUser,   
+             setCantidadXCarro,
+             isInCart,
+             removeONEProductToCart,
+             addProductToCart,
+             setQuantitiSelected,
+             totalPrice,
+             quantitiSelected
         }
 
 

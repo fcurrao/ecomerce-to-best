@@ -5,9 +5,30 @@ import { useState } from 'react'
 
 const Catalogo = ({ data }) => {
 
-    const { title, description, price, image } = data
+    const { id,title, stock, category, description, price, image } = data
     const [processToAdd, setProcessToAdd] = useState(false)
+    const [unidadesAComprar, setUnidadesAComprar] = useState(1)
+    const [unidadesAComprarCambiante, setUnidadesAComprarCambiante] = useState(1)
+    var contadordeunidad = 1;
 
+    const restaUnidad = ()=>{
+        if(unidadesAComprar>1){
+            contadordeunidad = unidadesAComprar
+            contadordeunidad = contadordeunidad-1
+            setUnidadesAComprar(contadordeunidad) 
+        } 
+    }
+
+    const sumaUnidad= (id)=>{
+       
+        if(unidadesAComprar<data[id].stock){ 
+            contadordeunidad = unidadesAComprar
+            contadordeunidad = contadordeunidad+1
+            setUnidadesAComprar(contadordeunidad) 
+        }
+        
+    }
+    
     const agregandoAlCarro = () => {
         setProcessToAdd(true)
     }
@@ -30,7 +51,7 @@ const Catalogo = ({ data }) => {
                                 <></>
                             }
 
-                            {console.log(product.stock)}
+                            {/* {console.log(product.stock)} */}
                             {product.stock == 0 ?
                                 <> <div className='cuadraditoNegro'> Sin Stock </div></>
                                 :
@@ -41,9 +62,9 @@ const Catalogo = ({ data }) => {
                                     <img className='imagenEnCatalogo' src={`/assets/img/${product.image}`} alt="Imagen producto" />
                                     <div className='datosDelProducto'> </div></div>
                             </Link>
-                            <div className='datosDelProductoTexto'>
+                            <div className='datosDelProductoTexto'> 
                                 <h6 className='textnegro'> <h6 className='textrojo'>{product.title}</h6>  </h6>
-                                <h6 className='textnegro'> <h6 className='textrojo'>  {product.description} </h6></h6>
+                                <h6 className='textnegro'> <h6 className='textrojo'>  {product.category} </h6></h6>
                                 <h6 className='textnegro'>
 
                                     {product.viejo != 0 ?
@@ -56,20 +77,25 @@ const Catalogo = ({ data }) => {
 
 
                                     <h6 className='textrojo'> ${product.price}</h6></h6>
+                                    
 
-
-                                {processToAdd ? <>
+                                    {processToAdd ? <>
                                     <div className='opcionesDeCadaProducto2'>
 
 
-                                        -<span className="d-none d-md-inline-block">numero</span>+
+                                    <button className='btn '   style={{ padding:"2%"}}onClick={()=>restaUnidad()}>-</button>
+                                    {unidadesAComprar}
+                                    <button className='btn ' style={{ padding:"2%"}} onClick={()=>sumaUnidad(product.id-1)}>+</button>
 
                                         <div className='opcionesDeCadaProducto'>
-                                            <h9>Agregar al Carro </h9><h4 className="svg3" onClick={() => setProcessToAdd(false)}>X </h4>
-                                        </div></div>
-
-
-
+                                            <button className='btn '   onClick={() => console.log("compro", unidadesAComprar)} style={{ margin:"2%", color:"negro" , cursor: "pointer", fontFamily: "Poppins", fontWeight: 600, marginRight: "5px"}}>
+                                                Agregar
+                                                 </button>
+                                            <h8 className="svg3" onClick={() => setProcessToAdd(false)}>X </h8>
+                                        </div>
+                                        
+                                        </div>
+ 
                                 </>
                                     : <>
                                         <div className='opcionesDeCadaProducto'>

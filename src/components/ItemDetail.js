@@ -17,9 +17,32 @@ const ItemDetail = ({ data }) => {
     const [imagensita, setImagensita] = useState('')
     const [fotoGrande, setFotoGrande] = useState(1)
     const [modaleState, setModalState] = useState(false)
+    const [processToAdd, setProcessToAdd] = useState(false)
+    const [unidadesAComprar, setUnidadesAComprar] = useState(1)
 
     const en12cuotasSub = (price / 12);
     const en12cuotas = en12cuotasSub.toFixed(2);
+
+
+    var contadordeunidad = 1;
+
+    const restaUnidad = ()=>{
+        if(unidadesAComprar>1){
+            contadordeunidad = unidadesAComprar
+            contadordeunidad = contadordeunidad-1
+            setUnidadesAComprar(contadordeunidad) 
+        } 
+    }
+
+    const sumaUnidad= (id)=>{
+       
+        if(unidadesAComprar<stock){ 
+            contadordeunidad = unidadesAComprar
+            contadordeunidad = contadordeunidad+1
+            setUnidadesAComprar(contadordeunidad) 
+        }
+        
+    }
 
     const onSubmitDetalle = () => {
         console.log("Tocaste Boton   detalle producto")
@@ -86,108 +109,32 @@ const ItemDetail = ({ data }) => {
 
             </section>
             <section className='sectorOpciones'>
-            <span className="btn2 btn btn-primary"> {title}</span><br></br>
-            <span className="btn2 btn btn-primary"> {description}</span><br></br>
-            <span className="btn2 btn btn-primary">{price}</span><br></br>
-
-
+            <h1 className="btn2"> {title}</h1><br></br>
+            <h6 style={{ width: "50%" }} > {description}</h6>
+            {/* <span className="btn2 btn btn-primary"> {description}</span><br></br> */}
+            <span className="btn2 btn " style={{ backgroundColor: "black", color: "white", cursor: "auto" }} >{price} $ </span><br></br>
+            
+            
+         
+ 
+                             
+                            
+                <ItemCount  productData={data} stock={stock} initial={1} />
 
             </section>
             </section> 
-           
-
-
-                {/* <div className="item-product-zoom">
-                    <div className='fotitos'>
-                        <button className="foti zindexabajo" onClick={onSubmitChangePicture1}> <img src={`../assets/img/${image}`} alt="Imagen producto" /></button>
-                        <button className="foti zindexabajo" onClick={onSubmitChangePicture2}> <img src={`../assets/img/${image2}`} alt="Imagen producto" /></button>
-                        <button className="foti zindexabajo" onClick={onSubmitChangePicture3}> <img src={`../assets/img/${image3}`} alt="Imagen producto" /></button>
-                    </div>
-
-                    {
-                        fotoGrande == 1 ?
-                            <div className="item-product2">
-                                <img src={`../assets/img/${image}`} onClick={onModal1} alt="Imagen producto" />
-                            </div>
-                            : fotoGrande == 2 ?
-                                <>
-                                    <div className="item-product2" >
-                                        <img src={`../assets/img/${image2}`} onClick={onModal2} alt="Imagen producto" />
-                                    </div>
-                                </>
-                                :
-                                <>
-                                    <div className="item-product2"  >
-                                        <img src={`../assets/img/${image3}`} onClick={onModal3} alt="Imagen producto" />
-                                    </div>
-                                </>
-                    }
-
-                    <div className="item-product3 ">
-                        <div className="item-product2 " >
-                            <span className="chiquito1 badge badge-warning">{category}</span>
-                            <p className='chiquito1'>Producto Organico</p>
-                            <h1>{title}</h1>
-                            <p className='description2 esp esp2' >{description}</p>
-                            <span className="btn2 btn btn-primary">$ {price}</span><br></br>
-                            <p className='red' >pagalo en 12 cuotas de {en12cuotas}</p>
-                            <select className='padbot' >
-                                <p>Tipo:</p>
-
-
-
-
-                                {type.map((t) => {
-                                    return <option>{t}</option>
-                                })}
-                                <br></br> <br></br> <br></br> <br></br>
-                                <br></br>
-                            </select >
-                            <span className="badge badge-danger">RECOMENDADO</span>
-                        </div>
-                        <div className="item-product2 esp">
-
-                            {
-                                quantitiSelected > 0 ?
-                                    <>
-                                        {console.log("quantitiSelected", quantitiSelected)}
-                                        <div className='padtop'><h4>Agrego al carro :  {quantitiSelected} unidades</h4>
-                                            <Link to={`/cart`}>
-                                                <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Terminar Compra</button>
-                                            </Link>
-                                            <Link to={`/productos`}>
-                                                <button className="btn btn-group btnx2" onClick={onSubmitComprar}>Seguir comprando...</button>
-                                            </Link>
-                                        </div>
-                                    </>
-                                    :
-                                    <><div className='padtop'>
-                                        <ItemCount productData={data} stock={stock} initial={1} />
-                                        <p className='chiquito1'>stock disponible: {stock}</p>
-                                    </div>
-                                    </>
-                            }
-                            {modaleState && <Modal className="custom2" data={data} setModalState={setModalState} imagensita={imagensita}>
-
-                                <div className="item-product22"  >
-                                    <h2>{title}</h2>
-                                    <img className="imgzoom" src={`../assets/img/${imagensita}`} alt="Imagen producto" />
-
-                                </div>
-                            </Modal>}
-
-                        </div>
-                    </div>
-                </div> */}
-
-                <section className='sectorAbajo'> 
+            <section className='sectorAbajo'> 
                 <div>
-                    <h3>Aca va decription del producto</h3>
+                    <h3>{description}</h3>
                 </div>
                 
                 </section> 
 
             </> : <><h1>NO EXISTE ESTE PRODUCTO</h1></>}
+
+
+    
+             
 
 
 

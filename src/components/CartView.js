@@ -10,13 +10,13 @@ import Button from 'react-bootstrap/Button';
 const CartWiew = () => {
 
 
-    const { addProductToCart, cantidadXCarro, cartProducts, clear, removeProductToCart, setCantidadXCarro } = useContext(CartContext)
+    const { setShowCart,addProductToCart, cantidadXCarro, cartProducts, clear, removeProductToCart, setCantidadXCarro } = useContext(CartContext)
 
     // const {showCart,setShowCart} = useContext(CartContext)
 
     let total = 0
     let subtotal = 0
-    let mostrar = false
+    let mostrar = true
 
     console.log("xxxxxxxxxxxxxxxxxxxxxxx", cartProducts)
 
@@ -32,7 +32,9 @@ const CartWiew = () => {
         console.log(mostrar)
     }
 
-
+    const cerrarModalCart =() =>{
+        setShowCart(false)
+    }
     const calculandoElTotal = () => {
         cartProducts.map((product) => {
 
@@ -47,8 +49,7 @@ const CartWiew = () => {
 
 
 
-    return (<>
-        <h1>HOLA</h1>
+    return (<> 
          
         <>  
 
@@ -57,9 +58,10 @@ const CartWiew = () => {
                 <div class="dropdown">
                     <button onClick={showCart} className='btncarro btn btn-secondary dropdown-toggle ' style={{ color: cantidadXCarro > 9 ? 'darkblue' : 'black' }}
                         type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                        aria-haspopup="true" aria-expanded="false"> 
 
-                        <img className="carro" src={`../assets/img/carticon.svg`} alt="Imagen producto" />  {cantidadXCarro}</button>
+<svg class="svg1 bi bi-cart3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path></svg>
+ {cantidadXCarro} Productos</button>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <div>
@@ -69,8 +71,8 @@ const CartWiew = () => {
                             </div>
                             {cartProducts.map((product) => {
                                 return <>
-                                    <div className="item-productxx margin hoverr">
-                                        <img className="imgcart" src={`../assets/img/${product.image}`} alt="Imagen producto" />
+                                    <div  className="item-productxx margin hoverr">
+                                        <img   className="imgcart" src={`../assets/img/${product.image}`} alt="Imagen producto" />
                                         {/* {namee} */}
                                         <div  >
                                             <h3>{product.title}</h3>
@@ -106,7 +108,7 @@ const CartWiew = () => {
 
                                 <h3 className='item-productx margin float-left'>Total del Carro: {total}</h3>
                                 <Link to={`/cart`}>
-                                    <button className="btn btnp btn-group2 bttn" > VER MI CARRO</button>
+                                    <button  onClick={cerrarModalCart} className="btn btnp btn-group2 bttn" > VER MI CARRO</button>
                                 </Link>
                                 <button className="btn btn-group2 bttn" onClick={clear}>Limpiar Carrito</button>
                             </div>
@@ -141,9 +143,8 @@ const CartWiew = () => {
 
 
 
-
-
-        <Link to="/" className="ptext" href="#">       <button className='margenesch'  >  Mi Carrito</button><br></br> </Link>
+ 
+        <Link to="/cart" className="ptext">       <button   onClick={cerrarModalCart} className='margenesch'  >  Mi Carrito</button><br></br> </Link>
         <button className='margenesch'  >  Limpiar Carrito</button><br></br>
     </>)
 }

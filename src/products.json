@@ -4,11 +4,11 @@
     "1":{
 "id": 1,
 "title": "arbolDeLaVida ",
-"description": "arbolDeLaVida",
+"description": "uxus sempervirens, el boj común, es un arbusto o pequeño árbol siempreverde, originario de Europa",
 "category": "Almacen",
 "filtradito": "oferta",
 "price": 150,
-"qty": 0,
+"qty": 100,
 "image": "arbolDeLaVida.jpg",
 "image2": "arbolDeLaVida.jpg",
 "image3": "arbolDeLaVida.jpg",
@@ -24,7 +24,7 @@
 "2":{
 "id": 2,
 "title": "buxus",
-"description": "buxus",
+"description": "Buxus es un género de unas setenta especies de la familia Buxaceae. Los nombres comunes incluyen boj o boj.",
 "category": "Almacen",
 "filtradito": "oferta",
 "price": 1200,
@@ -44,7 +44,7 @@
 "3":{
 "id": 3,
 "title": "estrellaFlor",
-"description": "estrellaFlor",
+"description": "Se trata de un arbusto semiperenne con las hojas muy pequeñas, que produce unas diminutas flores blancas muy bonitas durante prácticamente todo el año",
 "category": "Congelados",
 "filtradito": "oferta",
 "price": 460,
@@ -64,7 +64,7 @@
 "4":{
 "id": 4,
 "title": "ficus",
-"description": "ficus",
+"description": "Ficus retusa es una especie de planta leñosa de hoja perenne del género fig, nativa del archipiélago malayo y la región florística de Malesia. El nombre de la especie ha sido ampliamente mal aplicado a Ficus microcarpa. ",
 "category": "Almacen",
 "filtradito": "oferta",
 "price": 421,
@@ -84,7 +84,7 @@
 "5":{
 "id": 5,
 "title": "jazminBlanco",
-"description": "jazminBlanco  ",
+"description": "Se trata de un bonsái muy valorado entre los principiantes, ya que tiene un crecimiento notablemente rápido y desprende una fragancia muy distintiva y agradable  ",
 "category": "Almacen",
 "filtradito": "oferta",
 "price": 560,
@@ -104,7 +104,7 @@
 "6":{
 "id": 6,
 "title": "juniperus",
-"description": "juniperus",
+"description": "Juniperus chinensis, el enebro chino es una especie de planta de la familia de los cipreses Cupressaceae, originaria de China, Myanmar, Japón, Corea y el Lejano Oriente ruso. ",
 "category": "Congelados",
 "filtradito": "oferta",
 "price": 1530,
@@ -124,7 +124,7 @@
 "7":{
 "id": 7,
 "title": "juniperusChino",
-"description": "juniperusChino",
+"description": "Juniperus chinensis, el enebro chino es una especie de planta de la familia de los cipreses Cupressaceae, originaria de China, Myanmar, Japón, Corea y el Lejano Oriente ruso. ",
 "category": "Almacen",
 "filtradito": "oferta",
 "price": 220,
@@ -144,7 +144,7 @@
 "8":{
 "id": 8,
 "title": "muerdago",
-"description": "muerdago",
+"description": "Los muérdagos son plantas parásitas de la familia Loranthacea, que se presentan en casi todos los ecosistemas naturales.",
 "category": "Almacen",
 "filtradito": "oferta",
 "price": 400,

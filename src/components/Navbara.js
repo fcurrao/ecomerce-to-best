@@ -83,8 +83,8 @@ const Navbara = () => {
           <Link to={`/categorias/Paisajismo`}   ><div className="margensitos" onClick={limpiandoSearch}> Paisajismo </div> </Link>
           <Link to={`/categorias/Peijing`}   > <div className="margensitos" onClick={limpiandoSearch} > Peijing</div></Link>
           <NavDropdown className="margensitos drop" title="Mas">
-            <Link to={`/categorias/Paisajismo`}    > <div className="margensitos" onClick={limpiandoSearch}> Paisajismo </div> </Link>
-            <Link to={`/categorias/Peijing`}> <div className="margensitos" onClick={limpiandoSearch}> Peijing</div></Link>
+            <Link to={`/categorias/Paisajismo`}    > <div className="margensitos" onClick={limpiandoSearch}> Arboles </div> </Link>
+            <Link to={`/categorias/Peijing`}> <div className="margensitos" onClick={limpiandoSearch}> Macetas</div></Link>
 
           </NavDropdown>
           <Link to={`/About`}  > <div onClick={limpiandoSearch} className="margensitos" > Nosotros</div></Link>
