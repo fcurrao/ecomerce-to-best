@@ -11,6 +11,22 @@
     
 }
 
+.cartviewxitem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+scale: 0.85;
+}
+
+.titu{
+    font-weight: 700;
+    font-size: 24px;
+}
+.pp{
+    font-size: 20px;
+}
 /* ***************** */
 /* 1
 /* ***************** */
@@ -35,11 +51,11 @@
 }
 
 .titu{
-    zoom:90%
+    zoom:110%
 }
 
 .pp{
-    zoom:90%
+    display:none;
 }
 
 .redondel {
@@ -157,11 +173,11 @@
 }
 
 .titu{
-    zoom:70%
+    zoom:120%
 }
 
 .pp{
-    zoom:70%
+    display:none;
 }
 }
 

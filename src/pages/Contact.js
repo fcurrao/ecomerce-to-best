@@ -48,9 +48,9 @@ e.preventDefault()
 <section className="zoomosetentaycinco centrado">
   
 
-<div className="mediapag">
+<div style={{margin: "10px"}}  className="mediapag">
 <div className="titulo texto ">
-<h2 className="titulo">Contactanos</h2>
+<h2 style={{fontWeight: "700"}}  className="titulo">Contactanos</h2>
 <h3 className="titulo subtexto "><br/>
 Direción: <br/>
 Av. Santa Fe 988, Microcentro. CABA
@@ -70,7 +70,7 @@ Bonsais Orlando
 </div>
 <br/>
 <div className="imagen">
-<p className="subtexto" >Formulario</p> 
+<p className="subtexto" > </p> 
 
 <form  id="formulario1" onSubmit={enviarcontacto}  className=" formulario"> 
       
@@ -96,14 +96,14 @@ Bonsais Orlando
                             <br />
                             <br />
 
-                             adress<br /><input id="adress" className='inputt' type='text' 
-                            name='adress' 
+                            {/* adress<br /><input id="adress" className='inputt' type='text' 
+                           name='adress' 
                             placeholder='adress'
-                            //  value={formDataUser.adress}
-                        //     onChange={handleChange}
+                             value={formDataUser.adress}
+                            onChange={handleChange} 
                             />
                             <br />
-                            <br />
+                            <br /> */}
                             email<br /><input id="email" className='inputt' type='email' 
                             name='email' 
                             placeholder='email'
@@ -125,7 +125,7 @@ Bonsais Orlando
                                                           <br />
 
 
-                            <button type="submit"> Enviar Consulta</button>
+                            <button className='btn btn-group2 bttn' type="submit"> Enviar Consulta</button>
                             <br />
                             </div>
 

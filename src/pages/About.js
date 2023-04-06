@@ -20,24 +20,17 @@ return (  <>
 <section className="zoomosetentaycinco  centrado mediapag"> 
 
 
-<div className="mediapag ">
+<div style={{margin: "10px"}} className="mediapag ">
 <div className="texto">
-<h2 className="titulo subtexto " >Bonsais Orlando</h2>
+<h2 style={{fontWeight: "700"}}   className="titulo subtexto " >Bonsais Orlando</h2>
 <h3 className="titulo subtexto ">La alimentación está cambiando y cada vez somos más quienes participamos de esta transformación. Existen nuevas alternativas para llevar una vida sana y saludable, respetando el medioambiente y apoyando la sustentabilidad.
 </h3>
 <br/>
 
-
+<h4>
 Así es como nace Natural Deli, con la misión de ofrecer alimentos saludables y nutritivos que ayuden a mejorar la alimentación y a conectarnos con la naturaleza desde un nuevo lugar. Ofrecemos un servicio que te permitirá conocer alternativas para tus comidas y conseguirlas de una forma simple, segura y rápida. Conocé más sobre nuestro servicio en nuestra sección Cómo funciona!
-<br/><br/>
-Nuestros valores nos definen y nos acercan a donde queremos estar, por eso queremos compartirlos con ustedes:<br/>
-*Nutrición equilibrada<br/>
-*Cuidado de la salud<br/>
-*Sustentabilidad y respeto del medioambiente<br/><br/>
-Importante! La alimentación por ser saludable no* tiene porque ser aburrida ni carecer de sabor, tanto en nuestro sitio como en nuestras redes vas a encontrar distintas propuestas para preparar recetas riquísimas. Desde nuestro lugar, nos comprometemos a seleccionar el mejor portafolio de productos del mercado para ofrecerte una excelente experiencia de compra.<br/>
-
-<br/>
-Natural Deli
+<br/><br/> </h4>
+ 
 </div>
 <br/>
 <div className="imagenabout">

@@ -80,8 +80,9 @@ const Checkout = () => {
               
                 <h1  style={{margin:"5px", fontSize:"30px",justifyContent:"center", display:"flex", fontFamily:"Poppins"}}  >Tu Carrito  </h1>
                 {cartProducts.length !== 0 ? <>
-                    <div style={{ scale: "0.8" , justifyContent:" space-evenly", flexWrap:"wrap", flexDirection:"row", display:"flex"}}>
+                    <div style={{ scale: "0.82" , justifyContent:" space-evenly", flexWrap:"wrap", flexDirection:"row", display:"flex"}}>
                     
+
                         {cartProducts.map((product) => {
                             {
                                 subtotal = product.price * product.qty;
@@ -105,26 +106,41 @@ const Checkout = () => {
                                         <div style={{margin:"35px", display:"flex"}}>
                                             <button   className="btn btn-group2 bttn" onClick={() => removeProductToCart(product)}>Remover</button>
                                             <Link to={`/productos/${product.id}`}>
-                                                <button  className="btn " >Agregar mas</button>
+                                                <button  className="btn btn-group2 bttn" >Agregar mas</button>
                                             </Link>
                                         </div>
                                     </div>
                                 </div>
+                                
                             </>
+                            
                         })}
+                        
                     </div>
                     <div style={{display:"flex" , flexDirection:"column", alignItems:"center"}}> 
-                        <h2 className='margin2 float-left'>Total del Carro: {total}</h2>
+                        <h3 className='margin2 float-left'>Total del Carro: {total}</h3>
+                        *********************************************************
+                        <h5>FACTURA:</h5>
+                    {cartProducts.map((product) => { 
+                            return <>
+                           
+                        {product.title} ➡ {product.qty}x{product.price}💲  = {subtotal}$<br></br>
+                        </>})}
+                        <h5>   Total del Carro: {total}$</h5>
+
+
                     </div>
-                    <button className="btn btn-group2 bttn  float-left margin3" onClick={() => setShowModal(true)}> Continuar PAGO</button>
+                    <div  style={{display:"flex", flexDirection: "row", justifyContent:"center", margin:"10px"}} className='medioo'> 
+                    <button  style={{  margin:"10px"}}  className="btn-success btn btn-group2 bttn  float-left margin3" onClick={() => setShowModal(true)}> Continuar PAGO</button>
                     <Link to={`/productos`}>
-                        <button className=" btn btn-group2 bttn  float-left margin3 cvred"> Seguir comprando ...</button>
+                        <button style={{  margin:"10px"}}  className="btn-primary btn btn-group2 bttn  float-left margin3 cvred"> Seguir comprando ...</button>
                     </Link>
-                    <img className='margin2' src={`../assets/img/tarjetas.png`} alt="Imagen tarjetas" />
-                    <div className='medioo'>
-                        <button className="btn btn-group2 bttn float-left margin4"> Mas Info</button>
-                        <button className="btn btn-group2 bttn  float-left margin4 red" onClick={clear}>Limpiar Carrito</button>
                     </div>
+                    <div  style={{display:"flex", flexDirection: "row", justifyContent:"center", margin:"10px"}} className='medioo'> 
+                        <button  style={{  margin:"10px"}} className="btn-dark btn btn-group2 bttn float-left margin4"> Mas Info</button>
+                        <button  style={{  margin:"10px"}}  className="btn-warning btn btn-group2 bttn  float-left margin4 red" onClick={clear}>Limpiar Carrito</button>
+                    </div>
+                                    <img className='margin2' style={{width:"100%"}}   src={`../assets/img/otras/tarjetas.png`} alt="Imagen tarjetas" />
                 </> : <div style={{display:"flex", flexDirection: "column"}}>
                     <h2 style={{textAlign:"center"}} className='margin2 float-left'>  No hay ítems en el carro</h2>
                   <div  style={{justifyContent:"center", display:"flex"}} >  <Link to={`/productos`}>

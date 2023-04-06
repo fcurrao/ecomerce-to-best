@@ -140,7 +140,7 @@ const pushDatatoFireabase = async (newOrder) => {
 
                                            
                                             <Link to={`/productos/${product.id}`}>
-                                                <button className="btn btn-group2 bttn" >Agregar mas</button>
+                                                <button className="btn btn-group2 bttn" > Agregar mas</button>
                                             </Link>
 
                                         </div>

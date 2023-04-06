@@ -61,7 +61,7 @@ const Home = () => {
             <Container>
             <section className='paginaPrincipal'>
                 <div className='divTitulo'>
-                    <h1 className="textoCentrado titulo">Bonsais Orlando</h1>
+                     
                     <h2 className="textoCentrado subtitulo">Bonsais, paisajismo, Maquetas de Jardines,Paisaje en maceta y Peinjing</h2>
                 </div>
 
